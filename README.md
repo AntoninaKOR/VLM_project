@@ -20,12 +20,13 @@ docker compose build
 ```
 Then run:
 ```
-    docker run --name transformers-container -p 7860:7860 \
+    docker run --name gradio-container -p 7860:7860 \
   -v "$(pwd)/hf_cache:/app/hf_cache" \
   -e HF_HOME=/app/hf_cache \
   -e TRANSFORMERS_CACHE=/app/hf_cache/transformers \
-  my-image
+  antoninakar/gradio_interface_smolvlm
 ```
+where `-v "$(pwd)/hf_cache:/app/hf_cache" ` is needed to save HF cache on your computer by path /hf_cache , `-p 7860:7860`  is needed to choose host port and container port.
 4. Pull image 
 ``` 
 docker pull antoninakar/gradio_interface_smolvlm:latest
