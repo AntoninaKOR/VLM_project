@@ -1,0 +1,15 @@
+# Core ML frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Transformers and related
+transformers>=4.53.0
+tokenizers>=0.22.0
+safetensors>=0.4.3
+huggingface-hub>=0.34.0
+
+# for SmolVLM
+num2words
+
+gradio==3.50.0
