@@ -1,0 +1,15 @@
+# Ignore data and caches so they are not baked into the image
+data/
+hf_cache/
+models/
+*.ckpt
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+.cache
+__pycache__/
+*.log
+.DS_Store
+.env

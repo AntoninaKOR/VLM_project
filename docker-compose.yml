@@ -1,0 +1,22 @@
+services:
+  transformers-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: transformers-container
+    volumes:
+      # Mount project for development (optional). Remove or change to :ro in production.
+      # - .:/app
+      # Persist app data and outputs on host
+      - ./data:/app/data
+    working_dir: /app
+    ports:
+      - "7860:7860"  # For Gradio web interface
+    environment:
+      - PYTHONUNBUFFERED=1
+      - HF_HOME=/app/hf_cache
+      - TRANSFORMERS_CACHE=/app/hf_cache/transformers
+      - HF_DATASETS_CACHE=/app/hf_cache/datasets
+    stdin_open: true
+    tty: true
+    command: python3 main.py

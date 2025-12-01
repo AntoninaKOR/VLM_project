@@ -1,0 +1,12 @@
+# Optional Compose override to mount HuggingFace cache and model weights on the host.
+# Use together with the base compose file when you want model files persisted on the host:
+# docker compose -f docker-compose.yml -f docker-compose.hf.yml up -d
+
+services:
+  transformers-app:
+    volumes:
+      - ./hf_cache:/app/hf_cache
+    environment:
+      - HF_HOME=/app/hf_cache
+      - TRANSFORMERS_CACHE=/app/hf_cache/transformers
+      - HF_DATASETS_CACHE=/app/hf_cache/datasets
