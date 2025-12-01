@@ -1,5 +1,5 @@
-# Use Ubuntu 20.04 which has GLIBC 2.31
-FROM ubuntu:22.04
+# Use NVIDIA CUDA base image for GPU support
+FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04
 
 # Set non-interactive frontend to avoid timezone prompts
 ENV DEBIAN_FRONTEND=noninteractive
