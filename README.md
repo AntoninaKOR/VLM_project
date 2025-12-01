@@ -1,6 +1,7 @@
 There is web interface (gradio) for pretrained VLM for image description and OCR.
 # Requirements
 You should have cuda >= 12.1.
+Be sure you have installed nvidia container toolkit.
 # Instruction
 Ways to run the project:
 1. Build and run:
@@ -30,6 +31,7 @@ docker pull antoninakar/gradio_interface_smolvlm:latest
 ```
 Then bild and run by any way above.
 # Interface
+Choose device in setting firstly. You can't change it without restarting container.
 Access web interface:       
 Default access web interface at `http://localhost:7860` or `http://localhost:your_port` if you change the port when you have run container
 You can save model outputs to `./data` folder on host machine.
