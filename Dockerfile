@@ -29,12 +29,9 @@ COPY requirements.txt .
 # Install Python packages from requirements
 RUN pip3 install -r requirements.txt
 
-# Create a non-root user for security
-RUN useradd -m -u 1000 user && chown -R user:user /app
-USER user
 
-# Copy your application code
-COPY --chown=user:user . .
+# Copy code
+COPY . .
 
 # Run the Gradio app
 CMD ["python3", "main.py"]
