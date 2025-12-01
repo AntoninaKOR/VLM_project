@@ -1,4 +1,5 @@
 There is web interface (gradio) for pretrained VLM for image description and OCR.
+Model info: https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct
 # Requirements
 You should have cuda >= 12.1.
 Be sure you have installed nvidia container toolkit.
