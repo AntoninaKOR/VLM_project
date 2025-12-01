@@ -1,4 +1,3 @@
-# Ignore data and caches so they are not baked into the image
 data/
 .vscode/
 hf_cache/
@@ -12,5 +11,4 @@ models/
 .cache
 __pycache__/
 *.log
-.DS_Store
 .env
